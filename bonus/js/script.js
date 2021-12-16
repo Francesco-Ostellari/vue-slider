@@ -33,6 +33,14 @@ const app = new Vue (
       circleClick: function (index) {
         this.counter = index;
       },
+      autoPlay: function () {
+        this.timer = setInterval(() => {
+          this.next();
+        }, 3000);
+      }
+    },
+    created() {
+      this.autoPlay();
     }
   }
 );
