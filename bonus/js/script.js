@@ -37,6 +37,9 @@ const app = new Vue (
         this.timer = setInterval(() => {
           this.next();
         }, 3000);
+      },
+      stopTimer: function () {
+        clearTimeout(this.timer);
       }
     },
     created() {
