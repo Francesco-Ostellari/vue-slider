@@ -13,15 +13,15 @@ const app = new Vue (
       ]
     },
     methods: {
-      next: function () {
+      next: function () { //funzione per i next button
         this.counter +=1;
-        if (this.counter > this.images.length - 1) {
+        if (this.counter > this.images.length - 1) { //evito che si rompa quando arriva alla fine
           this.counter = 0;
         }
       },
-      prev: function () {
+      prev: function () { //funzione per i prev button
         this.counter -= 1;
-        if (this.counter < 0) {
+        if (this.counter < 0) { //evito che si rompa quando vado più indietro della prima img
           this.counter = this.images.length - 1;
         }
       }
