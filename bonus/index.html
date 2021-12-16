@@ -17,7 +17,7 @@
       <div @click="prev" class="prev">
         <i class="fas fa-angle-left"></i>
       </div>
-      <div class="images">
+      <div class="images" @mouseover="stopTimer" @mouseleave="autoPlay">
         <img :src="`images/${images[counter]}`" alt="">
       </div>
       <div @click="next" class="next">
