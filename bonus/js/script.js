@@ -18,27 +18,27 @@ const app = new Vue (
       ]
     },
     methods: {
-      next: function () {
+      next: function () { //funzione per i next button
         this.counter +=1;
-        if (this.counter > this.images.length - 1) {
+        if (this.counter > this.images.length - 1) { //evito che si rompa quando arriva alla fine
           this.counter = 0;
         }
       },
-      prev: function () {
+      prev: function () { //funzione per i prev button
         this.counter -= 1;
-        if (this.counter < 0) {
+        if (this.counter < 0) { //evito che si rompa quando vado più indietro della prima img
           this.counter = this.images.length - 1;
         }
       },
-      circleClick: function (index) {
+      circleClick: function (index) { //funzione per il click sull'icona dei pallini 
         this.counter = index;
       },
       autoPlay: function () {
-        this.timer = setInterval(() => {
+        this.timer = setInterval(() => { //funzione per l'autoplay
           this.next();
         }, 3000);
       },
-      stopTimer: function () {
+      stopTimer: function () { //funzione per fermare l'autoplay quando sono in hover sull'img
         clearTimeout(this.timer);
       }
     },
